@@ -1,0 +1,22 @@
+#pragma once //Gör så att kompilatorn inte läser filen med fighter klassen mer än en gång
+using namespace std;
+
+class Fighter
+{
+public:
+	Fighter(); //Deklaration av konstruktorn
+	~Fighter(); //Deklaration av destruktorn
+	int attack(Fighter* opponent, int fiende); //Deklaration av attack funktionen
+	void Heal(int spelare); //Deklaration av Heal funktionen
+	int getHP() { return health; } //Deklaration och definition av medlemsfunktionen getHP
+	static int levande; //Deklaration av den statiska datamedlemmen levande
+
+private:
+	int health;
+	int AC;
+	int healing;
+	int damage_die;
+	int rolls;
+	int damage_bonus;
+	int max_health;
+};
